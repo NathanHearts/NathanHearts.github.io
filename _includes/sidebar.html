@@ -4,28 +4,38 @@
                 {{ site.title }}
             </a>
         </h1>
-        
+
         <div class="navQuote">
             {{ site.quote }}
         </div>
-
+     
         <ul class="navItem">
+            {% assign pageUrl = page.url | split: "/" %}
+            {% assign pageUrl = "/" | append: pageUrl[1] %}
             <li>
-                <a href="{{ "/" | relative_url }}">
+                {% assign home = "/" | relative_url %}
+                <a class="{% if pageUrl == home %} bolded {% endif %}" href="{{ home }}">
                     Home
                 </a>
             </li>
             <li>
-                <a href="{{ "/about/" | relative_url }}">
+                {% assign about = "/about" | relative_url %}
+                <a class="{% if pageUrl == about %} bolded {% endif %}" href="{{ about }}">
                     About
                 </a>
             </li>
-            {%- for categoryName in site.categories -%}
+
+            {% for categoryName in site.categories %}
+            {% assign categoryLink = categoryName | first | relative_url %}
                 <li>
-                    <a href="{{ categoryName | first | relative_url }}">
+                    <a class="{% if pageUrl == categoryLink %} bolded {% endif %}" href="{{ categoryLink }}">
                         {{ categoryName | first }}
                     </a>
                 </li>
-            {%- endfor -%}
+            {% endfor %}
         </ul>
+
+        <div class="navQuote">
+            {{ site.copyright }}
+        </div>
 </nav>

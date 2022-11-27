@@ -8,20 +8,65 @@
     background-color: #202020;
 }
 
+.navbar a {
+    color: white;
+}
+
+.navbar a:visited {
+    color: white;
+}
+
 .navTitle {
     @include relative-font-size(3);
-    color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 3rem;
+    line-height: 2.75rem;
 }
 
 .navQuote {
     font-style: italic;
+    line-height: 1.8rem;
+    color: $grey-color;
+    margin-bottom: 0.75rem;
 }
 
 .navItem {
     @include relative-font-size(1.25);
     text-transform: capitalize;
     padding-left: 0;
+    margin-left: 0;
     list-style-type: none;
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 40rem) {
+    .navbar {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 4rem;
+        width: 100vw;
+        height: 3rem;
+        position: fixed;
+    }
+    .navTitle{
+        text-align: center;
+        @include relative-font-size(2.5);
+    }
+    .navItem {
+        @include relative-font-size(1);
+    }
+    .navQuote {
+        visibility: hidden;
+    }
+    .navItem {
+        margin-top: -5rem;
+    }
+    .wrapper {
+        margin-top: 10rem;
+        margin-left: 0;
+    }   
 }

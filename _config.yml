@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 quote: >- 
   "This will probably end up being a small quote or mantra
   that will be around two lines" - Nathan
+copyright: "© 2022. Nathan Hearts"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "nathanhearts.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  nathanhearts
