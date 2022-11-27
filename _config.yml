@@ -29,7 +29,7 @@ copyright: "© 2022. Nathan Hearts"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "nathanhearts.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  nathanhearts
-youtube_username: nathanhearts
+youtube_username: "@nathanhearts"
 permalink: "/:categories/:title"
 
 # Build settings
